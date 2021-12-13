@@ -1,0 +1,40 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Tables";
+}
+
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Monitoring Table</h1>
+    <p>Table for displaying monitoring data</p>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Sensor Name</th>
+                <th>Setpoint</th>
+                <th>Temperature</th>
+                <th>unit</th>
+                <th>Date time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var measurement in Model.measurementParameterList)
+            {
+                <tr>
+                    <th> @measurement.measurementId</th>
+                    <th> @measurement.sensorName</th>
+                    <th> @measurement.referenceValue</th>
+                    <th> @measurement.measurementValue</th>
+                    <th> @measurement.unit</th>
+                    <th> @measurement.measurementDateTime</th>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
