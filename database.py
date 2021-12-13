@@ -20,7 +20,7 @@ def GetConnectionString():
     driver="{ODBC Driver 17 for SQL Server}"
     server="NAWHASW10\MSSQLSERVER1"
     database="DATA"
-    username="Nawal"
-    password="Hassan1408"
+    username=
+    password=
     connectionString="DRIVER=" + driver + ";SERVER=" + server + "; DATABASE=" + database + "; UID=" + username + "; PWD=" + password 
    """

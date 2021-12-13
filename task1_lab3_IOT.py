@@ -8,47 +8,6 @@ import time
 import numpy as np
 import time
 import matplotlib.pyplot as plt
-
-topic="Sensor/temperature/temperatureout" 
-topic2="Sensor/temperature/setpoint"  
-
-# The callback for when the client receives a CONNACK response from the server.
-def on_connect(client, userdata, flags, rc):
-    if rc == 0:
-        print("Connected successfully")
-    else:
-        print("Connect returned result code: " + str(rc))
-
-# The callback for when a PUBLISH message is received from the server.
-def on_message(client, userdata, msg):
-    print("Received message: " + msg.topic + " -> " + msg.payload.decode("utf-8"))
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-# create the client
-client = mqtt.Client()
-client.on_connect = on_connect
-client.on_message = on_message
-# enable TLS
-client.tls_set(tls_version=mqtt.ssl.PROTOCOL_TLS)
-client.username_pw_set("nawal12345", "Passord12345")# set username and password
-client.connect("e8ffbe80fec84f149f9d583523ed4867.s1.eu.hivemq.cloud", 8883) # connect to HiveMQ Cloud on port 8883
-# subscribe to the topic "my/test/topic"
-client.subscribe("Sensor/temperature/temperatureout") 
-client.subscribe("Sensor/temperature/setpoint")
 # Model Parameters
 Kh = 3.5
 theta_t = 22
@@ -76,6 +35,33 @@ a=Ts/(Tf+Ts)
 yf = np.zeros(N+2)
 yf[0] = Tenv
 
+topic="Sensor/temperature/temperatureout" 
+topic2="Sensor/temperature/setpoint"  
+
+# The callback for when the client receives a CONNACK response from the server.
+def on_connect(client, userdata, flags, rc):
+    if rc == 0:
+        print("Connected successfully")
+    else:
+        print("Connect returned result code: " + str(rc))
+
+# The callback for when a PUBLISH message is received from the server.
+def on_message(client, userdata, msg):
+    print("Received message: " + msg.topic + " -> " + msg.payload.decode("utf-8"))
+# create the client
+client = mqtt.Client()
+client.on_connect = on_connect
+client.on_message = on_message
+# enable TLS
+client.tls_set(tls_version=mqtt.ssl.PROTOCOL_TLS)
+client.username_pw_set(####, ###)# set username and password
+client.connect("e8ffbe80fec84f149f9d583523ed4867.s1.eu.hivemq.cloud", 8883) # connect to HiveMQ Cloud on port 8883
+# subscribe to the topic "my/test/topic"
+client.subscribe("Sensor/temperature/temperatureout") 
+client.subscribe("Sensor/temperature/setpoint")
+
+
+
 # plot appearence 
 t = np.arange(0,Tstop+2*Ts,Ts)
 plt.figure(1)
@@ -92,7 +78,7 @@ plt.grid()
 
 #Simulation
 for k in range(N+1):
-#PI Controller
+    #PI Controller
     e[k] = r - Tout[k]
     u[k] = u[k-1] + Kp*(e[k] - e[k-1]) + (Kp/Ti)*e[k] 
     
@@ -100,16 +86,13 @@ for k in range(N+1):
         u[k] = 5
     if u[k]<0:
         u[k]=0
-        
-# Process Model
+     # Process Model
     Tout[k+1] = Tout[k] + (Ts/theta_t) * (-Tout[k] + Kh*u[int(k-theta_d/Ts)] + Tenv)
     #print("t = %2.1f, u = %3.2f, Tout = %3.2f" %(t[k], u[k], Tout[k+1]))
-#filter
-    
+    #filter
     yf[k+1]=(1-a)*yf[k]+a*Tout[k+1]
     yf[k]=yf[k+1]
     Tout[k+1]=yf[k+1]
-    
     
 
     if k%10 == 0: #live plot
@@ -140,6 +123,9 @@ for k in range(N+1):
     
     data= Tout[k+1]    
     time.sleep(Ts)
+    
+    
+    
     
 #DAQ--------------------------------------------------------
 # Read from DAQ Device
