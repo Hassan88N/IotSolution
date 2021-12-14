@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> <!--bootstrap CSS-->
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<html>
+<title>IoT and Cyber Security</title>
+<body class="d-flex flex-column min-vh-100">
+    <div class="w-100 bakgrunn" > </div>
+
+    <nav class="navbar navbar-light Navbarbg "> <!--Nav bar-->
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">IoT Monitoring Application</a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header text-dark">
+              <h5 class="offcanvas-title text-dark" id="offcanvasNavbarLabel">IoT Solution Content </h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
+
+                <li class="nav-item">
+                  <a class="nav-link active text-dark" aria-current="page" href="index.html">Paper</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="tables.html">Tables</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="refpage.html">References</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="video.html">Project Solution Video</a>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <main class="container-fluid row mb-5 "> 
+
+      <div class="col-sm-2 position-fixed mt-3">  <!--Content container--> 
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#intro" role="tab" aria-controls="home">1. Introduction</a>
+              
+              <div class="method">
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#method_0" role="tab" aria-controls="profile">2. Methodology</a>
+                <a class="list-group-item list-group-item-action method-underchapter" id="list-profile-list" data-toggle="list" href="#method_1" role="tab" aria-controls="profile">2.1 Air heater Control System</a>
+                <a class="list-group-item list-group-item-action method-underchapter" id="list-profile-list" data-toggle="list" href="#method_2" role="tab" aria-controls="profile">2.2 Transferring And Storing Data</a>
+                <a class="list-group-item list-group-item-action method-underchapter" id="list-profile-list" data-toggle="list" href="#method_3" role="tab" aria-controls="profile">2.3 Monitoring Web Application</a>
+              </div>
+
+              
+              <div class="Results">
+                <a class="list-group-item list-group-item-action " id="list-messages-list" data-toggle="list" href="#result_0" role="tab" aria-controls="messages">3. Results</a>
+                <a class="list-group-item list-group-item-action Results-underchapter" id="list-messages-list" data-toggle="list" href="#result_1" role="tab" aria-controls="messages">3.1 Stability analysis</a>
+                <a class="list-group-item list-group-item-action Results-underchapter" id="list-messages-list" data-toggle="list" href="#result_2" role="tab" aria-controls="messages">3.2 Control system</a>
+                <a class="list-group-item list-group-item-action Results-underchapter" id="list-messages-list" data-toggle="list" href="#result_3" role="tab" aria-controls="messages">3.3 Transferring And Storing Data</a>
+                <a class="list-group-item list-group-item-action Results-underchapter" id="list-messages-list" data-toggle="list" href="#result_4" role="tab" aria-controls="messages">3.4 Air Heater Monitoring App</a>
+
+              </div>
+              
+
+              <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#security" role="tab" aria-controls="profile">4. Security</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#conc" role="tab" aria-controls="settings">5. Conclusion</a>
+              <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#top" role="tab" aria-controls="settings">Back to top</a>
+            </div>          
+      </div>
+
+      <div class=" col-sm-6 offset-sm-3 ">
+        <div><!--page info-->
+          <h1 class="text-center" id="top">Industry 4.0 and Cyber Security</h1>
+          <br>
+          <p>Industry 4.0 is a brand-new wave for digital transformation of manufacturing, processing and optimizing solutions. The industry 4.0 tag is interchangeably used with the fourth industrial revolution, which illustrates the latest phase of organizing and controlling industrial value chains. The incorporation of new technological solutions containing internet of things (IoT) technologies are becoming increasingly desired by companies for optimal value throughout their processes. The goal of this page is to thoroughly illustrate a cloud-based IoT solution for a next generation industry 4.0 control and monitoring system.<a href="refpage.html#ref_list">[1]</a> </p>
+          <hr class="new">
+          <br>
+        </div>
+  
+        <div> <!--Introduction 1 -->
+          <h1 class="text-left" id="intro">1. Introduction</h1>
+          <p>The fourth industrial revolution has created endless possibilities for companies to monitor and control their process units effectively from easily accessible web application. The objective of this paper is to illustrate the development of a cloud-based monitoring web application for an air heater process unit in addition to conduct analysis of the control unit.</p>
+          <p>Development of the cloud-based monitoring application linked with a control system and a database system is described in this paper. Where the objectives for the control system is to create a simulated discrete air heater model based on mathematical equations in addition to creating a sufficiently tuned PI controller. The pre-development phase of the simulator includes frequency response and stability analysis.</p>
+          <p>The use of Mqtt communication protocol in combination with the control system is used to publish relevant measurement data from the control system to external clients. The client PC subscribing to the data is further used for storage of data inside a cloud-based SQL database provided by Microsoft Azure Cloud Services. An Azure web application developed in Visual Studio is additionally implemented to sufficiently create a process monitoring application in cooperation with the database. Despite having endless revolutionizing possibilities of IoT solution, there are certain cyber security concerns. These concerns are mentioned and described in the security section of the paper.</p>
+          <p>The sketch shown <a href="system_sketch.jpg">Figur 1.0</a> below describes the structure of the developed solution.</p>
+          <figure class="figure">
+            <img src="system_sketch.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 1.0 System sketch for the air heater monitoring solution. </figcaption>
+          </figure>
+
+          
+          <hr class="new">
+        </div>
+
+        <div><!--Methodology 2 -->
+          <h1 class="text-left" id="method_0">2. Methodology</h1>
+          <p>The methodology section of the paper describes the stability analysis of the process unit controller in addition to detailed explanation of the cloud-based web application for monitoring the temperature measurement values and reference values. These values are gathered from the developed air heater model based on the real process unit. Essential communication and storing protocols are also highlighted in this section.</p>
+          <hr class="new">
+        </div>
+
+        <div><!--Control system 2.1-->
+          <h3 class="text-left" id="method_1">2.1 Air Heater Control System</h3>
+          <p>A python program is developed to simulate the behavior of a real air heater unit based on mathematical models shown in eq 2.0-2.4. Where the process simulator is controlled by a discrete PI controller for the outlet temperature from the unit and a lowpass filter is implemented for filtering out measurement noise. The PI controller is based on the difference between reference values and measurement values to calculate error. It utilizes the integral and proportional terms of the PID controller with the possibilities of tuning Kp (gain) and Ti (integral time) parameters.<a href="refpage.html#ref_list">[2]</a> Equations 2.1 and 2.3 are discretized based on eq 2.0 and 2.2 by using forward Euler, as shown below.</p>
+          <figure class="figure">
+            <img src="equations.JPG" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption"> </figcaption>
+          </figure>
+          <p><a href="tables.html#Parametertable">Parameter Table</a> </p>
+          <p>Based on the equations given above, transfer functions shown in <a href="model_pic.JPG">Figure 2.1.1</a> have been configured. Where the transfer function for the controller, air heater model and the filter are defined.</p>
+        
+          <figure class="figure">
+            <img src="model_pic.JPG" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 2.1.1 Transfer functions for all elements in the control loop. </figcaption>
+          </figure>
+
+          <p>Fast and stable control systems are highly desirable for process units to quickly respond to its task without causing any unstability. Finding the perfect balance between responsiveness and stability is one of the main challenges before deployment of a control system. Where quick response time could cause instabilities while slow response time could improve the stability of the control system.</p>
+          <figure class="figure">
+            <img src="controller_parameter.JPG" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 2.1.2 Initial simulator parameters. </figcaption>
+          </figure>
+          <p>The initial parameters chosen for the controller inside the python scripts shown above in <a href="controller_parameter.JPG">Figure 2.1.2</a>. These controller parameters are based on the Ziegler Nichols method where Kp=0.45*Ku (ultimate gain) and Ti=0.8*Tu (ultimate integral time). The values for Ku=4.54 and Tu=8.0 are found by increasing gain values until the system is marginally stable and the GM (gain margin) is zero. Step response and frequency response is further held on the system in their respective domains with further tuning for improved controller parameters. <a href="refpage.html#ref_list">[3]</a></p>
+          <div class="text-center">
+            <figure class="figure">
+              <img src="laplace.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 2.1.3 Laplace transformation done by analysis script. </figcaption>
+            </figure>
+          </div>
+          <p>Laplace transformation is implemented in the python script to calculate the desired transfer function for the controller, process unit and the filter shown above in <a href="laplace.jpg">Figur 2.1.3</a>. These transfer functions are further used for calculating loop and tracking transfer functions. The stability analysis is conducted by the aid of control library provided for python. The stability analysis includes plotting of gain and magnitude inside a bode diagram in addition to a poles and zeros diagram. The procedure of tuning the controller and analyzing its stability is highly important before it is potentially applied to a real process unit.</p>
+          <hr class="new">
+        </div>
+
+        <div> <!--Communication Protocol And Database System-->
+          <h3 class="text-left" id="method_2">2.2 Transferring And Storing Data</h3>
+          <p>A publishing script is created in python to transmit information from the control system application to external client located on PCs as shown in <a href="Pub_Sub.jpg ">Figur 2.2.1</a>. The HiveMQ broker is used for brokering between the publisher (control system) and the subscriber (client PC) using MQTT communication protocols.</p>
+          <figure class="figure w-100">
+            <img src="Pub_Sub.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 2.2.1 MQTT connection from publisher to subscriber.</figcaption>
+          </figure>
+
+          <p>The subscription script in combination with the MQTT broker is a great method for accessing data. The script is further used to store the subscribed data inside a cloud-based SQL database provided by Microsoft Azure as shown in <a href="Sub_Db.jpg ">Figur2.2.2</a>. The transferring of data between the subscription script and the cloud SQL server is fulfilled by using SQL queries and stored procedure after establishing a connection with the desired SQL server.  </p>
+          <figure class="figure">
+            <img src="Sub_Db.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 2.2.2 Communication from subscriber script to Cloud database.</figcaption>
+          </figure>
+
+          <p>SQL server Management studio has been used for developing the cloud-based database system. Where the DATA database has been created with MeasurementDatabase table inside as shown below in <a href="database.JPG">Figur 2.2.3</a>. The content of this table includes the following columns: Id, ReferenceValue, MeasurementValue, Unit and DateTime.</p>
+          <figure class="figure">
+            <img src="database.JPG" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 2.2.3 Cloud Database Setup.</figcaption>
+          </figure>
+          <hr class="new">
+        </div>
+
+        <div><!--Monitoring app-->
+          <h3 class="text-left" id="method_3">2.3 Monitoring Web Application</h3>
+          <p>Monitoring of the process unit is realized through a web application developed on Visual studio in the form of Razor pages on ASP.NET core. The application is deployed as an Azure Cloud Web page with connection to the cloud-based SQL database with the use of queries and stored procedures.</p>
+          <p>The web page is divided into three different pages including a home page, table page and a page for displaying a line chart of data acquired from the cloud SQL database. The goal of the webpage is to give the user abilities to monitor important process information from an online web application as shown below in <a href="webapp_main.jpg">Figur 2.3.1</a>.</p>
+          <figure class="figure">
+            <img src="webapp_main.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 2.3.1 Home page for the monitoring application.</figcaption>
+          </figure>
+          <hr class="new">
+        </div>
+
+        <div><!--Results 3 -->
+          <h1 class="text-left" id="result_0">3 Results</h1>
+          <p>The results section of the paper includes results from the frequency response and stability analysis. In addition to results from the simulated control script for the PI-controller and air heater model. MQTT communication between the publishing and subscribing client are shown in addition to further transferring of data to the Azure SQL database. An overview of the monitoring Azure application is also displayed in this section.</p>
+          <hr class="new">
+        </div>
+        <div>
+          <h3 class="text-left" id="result_1">3.1 Stability analysis</h3>
+          <p>The stability analysis run with the process parameters and initial controller parameters defined in <a href="controller_parameter.JPG">Figure 2.1.2</a> earlier in the methodology section. These PI controller parameters are based on the Zieglar-Nichols method. The step response of the controller is shown below in the in <a href=" step_response1.jpg ">Figure 3.1.1</a>. Where the response is fairly quick, but has some initial oscillation with more stabilized values over time for tracking of the setpoint. Finding early oscillation in Zieglar-Nichols tuning is quite typical.</p>
+          <figure class="figure">
+            <img src="step_response1.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 3.1.1 Step response from Ziegler-Nichols method parameters.</figcaption>
+          </figure>
+          
+          <p>To further improve the tuning of the controller parameters, the controller gain is decreased to minimize the oscillation by setting Kp=0.8 and increasing Ti to 18s. The results of the improved PI-controller are shown below in <a href=" step_response2.jpg ">Figure 3.1.2</a>. Where the overshoot is decreased, while the response time is increased. This is acceptable since the use case of the controller is temperature control.</p>
+          <figure class="figure">
+            <img src="step_response2.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 3.1.2 Step response from further tuned PI-controller.</figcaption>
+          </figure>
+          
+          <p>Bodeplot of the tuned PI-controller is shown in <a href="bodeplot.JPG">Figure 3.1.3</a> in addition to calculated analysis parameters. The magnitude and phase plots for the loop transfer function are located in the upper and lower plots displayed in <a href="bodeplot.JPG">Figure 3.1.3</a>. The intersection between the magnitude curve and the zero dB line in the upper plot is defined as wc (Crossover Point rad/s) which indicates to the PM (Phase Margin) in degrees from the lower plot. While the intersection between the phase curve and the -180deg line in the lower plot is defined as w180 (Crossover point rad/s) for the phase plot. W180 indicates to the GM (Gain Margin) without decibel. Since the GM and PM values are positive, it indicates to a stable system. The Kc (Critical gain) value is calculated by multiplying the used Kp value with the GM value without decibel. Kc value is 4.89 which indicates how much the Kp value can be increased before creating an unstable system. All of these values are calculated and illustrated besides the plot in <a href="bodeplot.JPG">Figure 3.1.3</a>.</p>
+          <figure class="figure">
+            <img src="bodeplot.JPG" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 3.1.3: Bodeplot diagram and output values from analysis.</figcaption>
+          </figure>
+
+          <p>The poles and zeros map is displayed in <a href="poles_zeros.jpg">Figure 3.1.4</a>, where all zero values are placed on the imaginary-axis which reconfirms the fact that the system is asymptotically stable.</p>
+          <figure class="figure">
+            <img src="poles_zeros.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 3.1.4 Poles and Zeros map from analysis.</figcaption>
+          </figure>
+          <hr class="new">
+        </div>
+        
+
+        <div>
+          <h3 class="text-left" id="result_2">3.2 Control system</h3>
+          <p><a href="airheater_simulation.JPG">Figure 3.2.1</a> shows the use of the tuned PI-controller to regulate the temperature value (blue line) to the desired reference temperature (green line) at 26 degr[c] from the Te (environment temperature) given as 21.5deg[c]. The red line displays the control signal generated by the PI-controller to control the Air heater simulator. </p>
+          <p>Simulation time is set to 100s where the temperature is initially increasing and overshoots the references at t=10s, but the oscillation decreases over the course of the simulation and the temperature value settles to the desired reference value. The control signal acts in a similar manner with initial oscillation but stabilizing values over time.</p>
+          <figure class="figure">
+            <img src="airheater_simulation.JPG" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 3.2.1 Air heater simulation plot for reference value, temperature value and control signal.</figcaption>
+          </figure>
+          <hr class="new">
+        </div>
+
+        <div>
+          <h3 class="text-left" id="result_3">3.3 Transferring And Storing Data</h3>
+          <p>The MQTT communication protocol is used to establish a connection between the air heater control client and the subscription script with the HiveMQ broker for transmission of reference and temperature values as described in the methodology section of the paper. The subscribing script is further establishing a connection with the Azure cloud-based SQL database using queries. Where the data is stored inside the MeaserementDatabase. The table consists of the five columns: Id, ReferenceValue, MeasurementValue, Unit and DateTime as shown in <a href="database_values.jpg">Figure 3.3.1</a>.</p>
+          <figure class="figure">
+            <img src="database_values.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 3.3.1 Storing of information inside Azure SQL database.</figcaption>
+          </figure>
+          <hr class="new">
+        </div>
+
+        <div>
+          <h3 class="text-left" id="result_4">3.4 Air Heater Monitoring App</h3>
+          <p>The cloud-based SQL server and database is deployed on the Azure Portal in addition to the monitoring web application as shown in <a href="Azureportal.jpg ">Figure 3.4.1</a>. The goal for the monitoring application is to allow users access to essential information about the air heater. There is developed three razor pages to give the user an interactive and effective experience for monitoring the process unit with different monitoring capabilities. Firstly, the main page with illustration of the process unit as shown in <a href="webapp_main.jpg">Figure 3.4.2</a>. Secondly a table page with data for setpoint and temperature values shown in <a href="webapp_table.jpg">Figure 3.4.3</a>. Lastly, a chart page where the temperature data is displayed inside a plot based on the time as shown in <a href="webapp_chart.jpg">Figure 3.4.4</a>.</p>
+          <figure class="figure">
+            <img src="Azureportal.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 3.4.1 SQL server, database and Azure web application on Azure portal.</figcaption>
+          </figure>
+          <br>
+          <br>
+          <figure class="figure">
+            <img src="webapp_main.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 3.4.2 Home page for air heater monitoring app.</figcaption>
+          </figure>
+          <br>
+          <br>
+          <figure class="figure">
+            <img src="webapp_table.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 3.4.3 Table page for air heater monitoring.</figcaption>
+          </figure>
+          <br>
+          <br>
+          <figure class="figure">
+            <img src="webapp_chart.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 3.4.4 Chart page for air heater monitoring.</figcaption>
+          </figure>
+          <hr class="new">
+        </div>
+
+        <div> <!--Security 4 -->
+          <h1 class="text-left" id="security">4. Security</h1>
+          <p>Cyber security is a very important subject when it comes to IoT solution. One of the biggest challenges is to combat potential attacks or deny access to information gained by unauthorized personnel. Cyber security has been taken account to in all facets of this application.</p>
+          <p>Firstly, in the communication protocol MQTT where the security is divided into multiple layers for prevention of different types of attacks. The network layer provides trustworthy connection by using physically secure network for communication between clients and the broker. The transport level deals with confidentiality where TLS/SSL is used for encryption of transported data. This secures the transmission from unauthorized access. Application layer is the last layer, where communication is encrypted, and authentication is required from identities. Username and password credentials are required to authenticate the devices on the application level.<a href="refpage.html#ref_list">[4]</a></p>
+          <p>SQL injection is a code injection technique that can cause harm to databases by destroying the database or expose crucial information such as passwords. Certain combative actions have been taken into account under development of the database and under the connection protocol to the database. Users have been created additionally to the default sa user, proper data types have been implemented for the web application and the connection string to the database is not hard coded.<a href="refpage.html#ref_list">[5]</a> </p>
+          <p>SQL servers require SQL authentication which refers to the authentication of a user when connecting to SQL databases. A server admin login with a username and password must be specified when the server is being created. Using these credentials, a server admin can authenticate to any database on that server or instance as the database owner. Additional SQL logins and users can be created by the server admin, which enable users to connect using their username and password as illustrated in <a href="authentication.jpg">Figure 4.1</a>. </p>
+          <div class="text-center">
+            <figure class="figure ">
+              <img src="authentication.jpg" class="figure-img img-fluid rounded " alt="A generic square placeholder image with rounded corners in a figure.">
+              <figcaption class="figure-caption">Figure 4.1 SQL server Authentication. </figcaption>
+            </figure>
+
+          </div>
+          <p>The Azure SQL server operates similarly but it has IP firewall configuration capabilities in addition to the authentication. Where rules are needed to grant access to the database from the originating IP-address of each request. The screenshot in <a href="firewall.JPG">Figure 4.2</a> shows the firewall configuration page on Azure Portal. </p>
+          <figure class="figure">
+            <img src="firewall.JPG" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">Figure 4.2 Azure SQL server firewall setup. </figcaption>
+          </figure>
+          <hr class="new">
+        </div>
+        
+        <div><!--Conclusion 5 -->
+          <h1 class="text-left" id="conc">5. Conclusion</h1>
+          <p>In this report there has been shown the method of conducting stability analysis of a PI controller inside the control system of an air heater. The tuning of the controller is conducted by the Ziegler-Nichols method with its output results displayed. Based on the results, there are potential possibilities for improved tuning with other methods to decrease the oscillation and gain for a quicker stabilization to the reference value.</p>
+          <p>Secondly, the MQTT communication protocol has been implemented for transmission of data between the air heater simulation client and an external subscribing client through a HiveMQ broker. The security delivered withing this protocol is also discussed in the security section of the paper. Where the protocol itself has multiple security layers in addition to requiring user authentication under use.</p>
+          <p>The data gathered by the external client has further been stored inside Azures cloud-based SQL database. Security measures to combat potential SQL-injection attack have been taken by creating additional server user, properly using datatypes and not hard coding connection strings in the code. IP-firewalls has also been setup on the Azure Portal to fully secure the databases and deny any access other then the approved IP-addresses. This creates secure databases but could potentially be too restrained. An ASP.NET core web application for monitoring the air heater has also been created and published on an Azure web app, where the data stored inside the database has been retrieved through queries for monitoring purposes. The Azure web page displays monitoring functionalities such as tables and charts in addition to illustration of the air heater process unit.</p>
+          <hr class="new">
+        </div>
+      </div>
+
+
+      <div class="card col-sm-2 h-100 offset-sm-1 mt-3 card-padding "> <!--Link to webpage-->
+        <div class="card-header">
+          Azure Web page
+        </div>
+        <div class="card-body">
+
+          <p class="card-text">Access the Azure webapplication for the monitoring system</p>
+          <a href="https://nawalazureapp.azurewebsites.net/" class="btn btn-primary">Azure</a>
+        </div>
+        <br>
+        <div class="card-header">
+          Github Repository
+        </div>
+  
+        <div class="card-body">
+          
+          <p class="card-text">Access the Github Repository for sourcecode of this solution</p>
+          <a href="https://github.com/Hassan88N/IotSolution" class="btn btn-primary">Github</a>
+        </div>
+
+      </div>
+      
+      
+      
+
+    </main>
+
+    <footer class=" row footer mt-auto">
+      <div class="offset-sm-1">
+        <h1>Contact Information</h1>
+        <p>Faculty: University of Sout-Eastern Norway (USN)</p>
+        <p>Student mail: 228703@usn.no</p>
+        
+      </div>
+      <p class="text-center">2021 Nawal Hassan, All Rights Reserved.</p>
+      
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> <!--bundle bootstrap javascript-->
+</body>
+
+</html>

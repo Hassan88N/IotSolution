@@ -1,0 +1,68 @@
+.bakgrunn {
+    background: url("top_banner.jpg") center; 
+    background-size: contain;
+    width: 100%;
+    height: 10rem;
+    color: white;
+    padding-top: 10px;
+}
+body{
+    overflow-x: hidden;
+}
+
+.maininfo{
+    position:absolute;
+    height:1000px;
+    left:25%;
+}
+.footer{
+    background-color:#2E5F89; 
+    color: white;
+}
+
+hr.new {
+    border-top: 10px solid #2E5F89;
+}
+
+.list-group-item:hover{
+    background-color: #2E5F89;
+    color: white;
+    font-weight: bold;
+}
+
+.method-underchapter{
+    display: none;
+    border-color: #2E5F89;
+    border-width: 2px;
+    font-size: 12px;
+}
+.method:hover .method-underchapter{
+    display: block;
+}
+
+
+.Results-underchapter{
+    display: none;
+    border-color: #2E5F89;
+    border-width: 2px;
+    font-size: 12px;
+}
+.Results:hover .Results-underchapter{
+    display: block;
+}
+.offcanvas-end{
+    width: 300px;
+}
+.nav-link:hover{
+    font-weight: bold;
+}
+.Navbarbg{
+    background-color: #CBCBCB;
+    color: white;
+    margin-bottom: 50px;
+
+}
+
+.card-padding{
+    padding: 0;
+}
